@@ -1,5 +1,5 @@
 # CapHDR2IR
-Source code of the paper: "CapHDR2IR: Caption-Driven Transfer from Visible Light to Infrared Domain".
+Source code of the paper: **"[CapHDR2IR: Caption-Driven Transfer from Visible Light to Infrared Domain](https://arxiv.org/abs/2411.16327)"**.
 
 ## Installation
 
