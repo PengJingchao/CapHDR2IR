@@ -1,0 +1,25 @@
+name: HDR2IR_UNet_ours
+gpu_ids: [0]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: RGBTHDRDataset_test
+    mode: HDR2IR
+    hdr_dir: ./dataset/hdr_reduced_size
+
+    t_dir: ./dataset/infrared
+    index_path: ./dataset/testset.txt
+    GT_size: &dataset_size 256
+    n_workers: 5
+
+#### network structures
+network_G:
+  which_model_G: HDR2IR_Feature_Ours
+  in_nc: 3
+  out_nc: 1
+  size: *dataset_size
+
+#### path
+path:
+  root: ./
+  pretrain_model_G: ./experiments/HDR2IR_UNet_ours_ablation_1_e-1_e-1/models/83000_G.pth
